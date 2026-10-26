@@ -21,8 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: python3 scripts/download-assets.py
-      - run: npm install --no-audit --no-fund
+      - run: python3 scripts/prepare-assets.py
+      - run: npm ci --no-audit --no-fund
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
