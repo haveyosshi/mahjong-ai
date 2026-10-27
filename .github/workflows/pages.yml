@@ -24,9 +24,9 @@ jobs:
       - run: python3 scripts/prepare-assets.py
       - run: npm ci --no-audit --no-fund
       - run: npm run build
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+      - uses: actions/configure-pages@v5
       - uses: actions/deploy-pages@v4
         id: deploy

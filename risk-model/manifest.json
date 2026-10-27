@@ -1,0 +1,38 @@
+{
+  "id": "uchikawa",
+  "name": "ウチカワ",
+  "status": "provisional",
+  "dataset_games": 25000,
+  "target_games": 100000,
+  "onnx_sha256": "2ffb0ad2633a5b70870ba7545a3991ca0068efae0f27c79e2cfc238758414ad3",
+  "modelFile": "models/uchikawa-2ffb0ad2633a.onnx",
+  "feature_shape": [
+    82,
+    34
+  ],
+  "outputs": [
+    "relative1=下家",
+    "relative2=対面",
+    "relative3=上家"
+  ],
+  "target": "P(opponent has legal immediate ron if the candidate tile is discarded now | own hand and public information, Alpha x4 distribution)",
+  "parts": [
+    {
+      "name": "piece-000",
+      "bytes": 524288,
+      "sha256": "53274dc8c287fcb804bbb2416a88bdddfee321ec08ddcfd3ccbfe13432c0279f"
+    },
+    {
+      "name": "piece-001",
+      "bytes": 524288,
+      "sha256": "7aed81bcd7c3d184f38d901f924ce8b31a8f37a054960d78f611141dffd8b8f5"
+    },
+    {
+      "name": "piece-002",
+      "bytes": 146144,
+      "sha256": "deefe128b834330d9b70d0812970987e765afae3fc6b1afaf5eb5c346cf72d6c"
+    }
+  ],
+  "cache_tag": "uchikawa-25000-20261028",
+  "replaced_modelFile": "models/uchikawa-bdb6d4840cf7.onnx"
+}

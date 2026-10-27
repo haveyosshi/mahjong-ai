@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "name": "ウチカワ",
+  "id": "uchikawa",
+  "status": "provisional",
+  "target_games": 100000,
+  "dataset_games": 25000,
+  "splits": {
+    "train": 22485,
+    "val": 1243,
+    "test": 1272
+  },
+  "training_states": 11574903,
+  "training_candidate_labels": 344663742,
+  "training_positive_labels": 3111134,
+  "selected_epoch": 1,
+  "manifest_sha256": "82eb09630508f2f4c0092f24a3b070d845b2fc91317064022c1e637522dc87da",
+  "alpha_sha256": "f1ff5f07e0fb73aecc9a3a5671dc9a1b9c8067da26de1da5efb1b19ca82084d4",
+  "feature_shape": [
+    82,
+    34
+  ],
+  "outputs": [
+    "relative1=下家",
+    "relative2=対面",
+    "relative3=上家"
+  ],
+  "target": "P(opponent has legal immediate ron if the candidate tile is discarded now | own hand and public information, Alpha x4 distribution)",
+  "initialization": {
+    "checkpoint_sha256": "6f9c5f56380c6141beed100f12f7742a004f2b5df99670c165f1a5a7daaeae38",
+    "dataset_games": 10000,
+    "epoch": 1,
+    "manifest_sha256": "be895d364cbdd328985a99b90efa75ba7bebb26c2967f2df7b275678f7781628"
+  },
+  "objective": "unweighted masked Bernoulli binary cross entropy only; no policy/value/rank/tenpai losses",
+  "calibration": {
+    "temperature": 1.1279306411743164,
+    "bias": -0.3002074360847473
+  },
+  "validation": {
+    "labels": 18997014,
+    "positive": 170771,
+    "observed_rate": 0.008989360117332123,
+    "mean_prediction": 0.008991781088593198,
+    "log_loss": 0.03319847679280916,
+    "brier": 0.008217210939975877,
+    "reliability": [
+      {
+        "count": 18460748,
+        "positive": 103423.0,
+        "mean_prediction": 0.005467276611722931,
+        "observed_rate": 0.0056023190392935325
+      },
+      {
+        "count": 522928,
+        "positive": 64753.0,
+        "mean_prediction": 0.1279813801611494,
+        "observed_rate": 0.12382775449010189
+      },
+      {
+        "count": 13227,
+        "positive": 2563.0,
+        "mean_prediction": 0.22125397765209248,
+        "observed_rate": 0.1937703182883496
+      },
+      {
+        "count": 111,
+        "positive": 32.0,
+        "mean_prediction": 0.3189362370753073,
+        "observed_rate": 0.2882882882882883
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      }
+    ]
+  },
+  "test": {
+    "labels": 19429491,
+    "positive": 173366,
+    "observed_rate": 0.008922827674693073,
+    "mean_prediction": 0.008991885597053094,
+    "log_loss": 0.03292929009910809,
+    "brier": 0.008151452599309368,
+    "reliability": [
+      {
+        "count": 18886069,
+        "positive": 104562.0,
+        "mean_prediction": 0.00550315955163196,
+        "observed_rate": 0.005536461822732936
+      },
+      {
+        "count": 530132,
+        "positive": 66227.0,
+        "mean_prediction": 0.1279582467818545,
+        "observed_rate": 0.12492549025525718
+      },
+      {
+        "count": 13178,
+        "positive": 2557.0,
+        "mean_prediction": 0.22038751207139426,
+        "observed_rate": 0.1940355137350129
+      },
+      {
+        "count": 109,
+        "positive": 20.0,
+        "mean_prediction": 0.3158052161746069,
+        "observed_rate": 0.1834862385321101
+      },
+      {
+        "count": 3,
+        "positive": 0.0,
+        "mean_prediction": 0.41952841480573017,
+        "observed_rate": 0.0
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      },
+      {
+        "count": 0,
+        "predicted": 0.0,
+        "positive": 0.0,
+        "mean_prediction": null,
+        "observed_rate": null
+      }
+    ]
+  },
+  "limitations": [
+    "legal ron probability, not eventual hand deal-in rate",
+    "calibration tested on legally discardable hand tiles in Alpha x4 self-play; other players and absent tiles may differ",
+    "kan robbery is outside this discard model",
+    "no 100000-game completion claim until all real games and dataset hashes are present"
+  ],
+  "export_validation": {
+    "max_probability_abs_error": 2.8312206268310547e-07,
+    "onnx_sha256": "2ffb0ad2633a5b70870ba7545a3991ca0068efae0f27c79e2cfc238758414ad3",
+    "pt_sha256": "8db4bb5176882e4c71d2b43abe25abfefc86a83727792e264ae238d032556cbc"
+  }
+}
