@@ -1,11 +1,11 @@
 {
   "id": "uchikawa",
   "name": "ウチカワ",
-  "status": "provisional",
-  "dataset_games": 25000,
+  "status": "complete",
+  "dataset_games": 100000,
   "target_games": 100000,
-  "onnx_sha256": "2ffb0ad2633a5b70870ba7545a3991ca0068efae0f27c79e2cfc238758414ad3",
-  "modelFile": "models/uchikawa-2ffb0ad2633a.onnx",
+  "onnx_sha256": "f2ebca97607d105f71d032bb85304fa0180d4d35c65691f7d2af3ce028d22d41",
+  "modelFile": "models/uchikawa-f2ebca97607d.onnx",
   "feature_shape": [
     82,
     34
@@ -20,19 +20,19 @@
     {
       "name": "piece-000",
       "bytes": 524288,
-      "sha256": "53274dc8c287fcb804bbb2416a88bdddfee321ec08ddcfd3ccbfe13432c0279f"
+      "sha256": "84d1ab068ec2d821a5b0c9bd8f4c4323799a12f46e3492f634cb1b50bd2b1e83"
     },
     {
       "name": "piece-001",
       "bytes": 524288,
-      "sha256": "7aed81bcd7c3d184f38d901f924ce8b31a8f37a054960d78f611141dffd8b8f5"
+      "sha256": "d26872fb6164b2f50d29c21647434471eb9b71e5e732cc2e93521f3adad6bd66"
     },
     {
       "name": "piece-002",
       "bytes": 146144,
-      "sha256": "deefe128b834330d9b70d0812970987e765afae3fc6b1afaf5eb5c346cf72d6c"
+      "sha256": "8389ac8cab37b0c636603f38797e6cc8c2d3c1bae792e31e9762fcb55481be3f"
     }
   ],
-  "cache_tag": "uchikawa-25000-20261028",
+  "cache_tag": "uchikawa-100000-f2ebca97607d",
   "replaced_modelFile": "models/uchikawa-bdb6d4840cf7.onnx"
 }

@@ -11,7 +11,7 @@ export function useTileRisk(report:any,snapshot:number,player:number) {
   let start=snapshot;while(start>0&&report.game.events[start]?.type!=='start_kyoku')start--;
   const timer=setTimeout(()=>{try{
    const input=publicRiskInput(view,player,report.game.events.slice(start,snapshot+1));
-   worker.current ||= new Worker('/mahjong-ai/engine/tile-risk-worker.js?v=uchikawa-25000-20261028',{type:'module'});
+   worker.current ||= new Worker('/mahjong-ai/engine/tile-risk-worker.js?v=uchikawa-100000-f2ebca97607d',{type:'module'});
    const current=worker.current;current.onmessage=e=>{if(e.data.id===sequence.current)setValue({report,snapshot,player,data:e.data.error?{error:e.data.error}:{risks:e.data.risks}});};
    current.onerror=()=>{if(id===sequence.current)setValue({report,snapshot,player,data:{error:'放銃率を推定できませんでした。'}});};current.postMessage({id,input});
   }catch{if(id===sequence.current)setValue({report,snapshot,player,data:{error:'この局面の放銃率を推定できません。'}});}},120);
@@ -19,3 +19,4 @@ export function useTileRisk(report:any,snapshot:number,player:number) {
  },[report,snapshot,player]);
  return value?.report===report&&value.snapshot===snapshot&&value.player===player?value.data:null;
 }
+
